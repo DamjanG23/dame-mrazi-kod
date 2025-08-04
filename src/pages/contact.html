@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Damjan's Portfolio</title>
+    <title>Contact Me | Damjan's Portfolio</title>
 
+    <!-- Google Fonts Integration -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Roboto:wght@300;400&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Font Awesome for social icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -18,17 +21,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="src/css/style.css" />
+
+    <!-- Path from pages folder up to root, then down to css -->
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container">
         <nav class="site-nav">
           <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="src/pages/about.html">About</a></li>
-            <li><a href="src/pages/projects.html">Projects</a></li>
-            <li><a href="src/pages/contact.html">Contact</a></li>
+            <!-- Path from pages folder up to root for index.html -->
+            <li><a href="../../index.html">Home</a></li>
+            <!-- Links to other pages in the same folder -->
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -36,22 +43,19 @@
 
     <main>
       <div class="container">
-        <h1>Hello I'm Damjan...</h1>
-        <div class="image-wrapper">
-          <img
-            src="https://placehold.co/200x200/4F46E5/FFFFFF?text=Damjan"
-            alt="Damjan's photo"
-          />
-        </div>
-        <h2>Welcome to my page!</h2>
+        <h1>Contact Me</h1>
+        <h2>Let's get in touch.</h2>
       </div>
     </main>
 
+    <!-- NEW FOOTER SECTION -->
     <footer class="site-footer">
       <div class="container">
         <div class="footer-content">
+          <!-- You can update the year dynamically with JS later, but for now, static is fine -->
           <p>&copy; 2024 Damjan. All Rights Reserved.</p>
           <div class="social-links">
+            <!-- Replace '#' with your actual profile URLs -->
             <a href="#" target="_blank" aria-label="GitHub Profile"
               ><i class="fa-brands fa-github"></i
             ></a>
