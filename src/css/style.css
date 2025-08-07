@@ -12,8 +12,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   line-height: 1.6;
-  /* Add some default padding to the sides for mobile */
-  padding: 0 20px;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 /* --- Layout --- */
@@ -29,11 +28,11 @@ body {
 
 .site-header {
   background-color: #1f1f1f;
-  padding: 1rem 0;
-  border-bottom: 2px solid #333;
-  /* Make the header stretch to the edges of the viewport */
-  margin: 0 -20px; /* This counteracts the body padding */
-  padding: 1rem 20px; /* Add the padding back inside the header */
+  padding: 1rem 20px; /* Apply consistent padding */
+  position: fixed;
+  top: 0;
+  width: 100%; /* Span the full viewport width */
+  z-index: 1000; /* High z-index to stay on top */
 }
 
 .site-nav ul {
@@ -64,7 +63,8 @@ body {
 /* --- Main Content --- */
 
 main {
-  padding-top: 40px;
+  /* Add padding to the top to account for the fixed header */
+  padding-top: 60px; /* Adjust this value to match your header's height */
 }
 
 /* MOBILE-FIRST HEADING SIZES */
@@ -109,6 +109,11 @@ h2 {
 /* This media query targets any screen with a minimum width of 768px. */
 /* This is a common breakpoint for tablets and larger devices. */
 @media (min-width: 768px) {
+  .hero {
+    margin: 0; /* Remove the negative margin on larger screens */
+    padding: 0; /* Remove the padding on larger screens */
+  }
+
   /* On larger screens, we don't need the body padding */
   body {
     padding: 0;
@@ -166,15 +171,9 @@ h2 {
 .site-footer {
   background-color: #1f1f1f;
   color: #aaa;
-  padding: 2rem 0;
-  margin-top: 60px; /* Adds space between main content and footer */
-  border-top: 2px solid #333;
+  padding: 2rem 20px; /* Apply consistent padding */
+  /* margin-top: 60px; */ /* No longer needed */
   font-size: 0.9rem;
-  /* This counteracts the body padding on mobile, similar to the header */
-  margin-left: -20px;
-  margin-right: -20px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .footer-content {
@@ -198,4 +197,49 @@ h2 {
 .social-links a:hover {
   color: #4f46e5; /* Use our main highlight color on hover */
   transform: translateY(-3px); /* Give the icon a little "lift" on hover */
+}
+
+.hero {
+  background-color: #121212; /* Match the body background */
+  min-height: calc(100vh - 60px);
+  display: flex; /* Use flexbox to position the text columns */
+  align-items: center; /* Vertically center the text columns */
+  justify-content: space-between; /* Push text to the sides */
+  padding: 0 20px; /* Apply consistent padding */
+  position: relative; /* Crucial for absolute positioning of the character */
+  overflow: hidden;
+}
+
+.hero-character {
+  position: absolute; /* Take the character out of the document flow */
+  height: 100%; /* Make it as tall as the hero section */
+  width: auto;
+  object-fit: contain;
+  /* Center it perfectly */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Place it in front of the text */
+}
+
+.hero-text-left {
+  flex: 1; /* Allow the text containers to grow */
+  text-align: left;
+  z-index: 1; /* Place the text behind the character */
+}
+
+.hero-text-right {
+  flex: 1; /* Allow the text containers to grow */
+  text-align: right;
+  z-index: 1; /* Place the text behind the character */
+}
+
+.hero-text-left h2,
+.hero-text-right h2 {
+  font-family: "Jersey 10", cursive;
+  font-size: 8rem; /* Increased from 6rem */
+  font-weight: bold; /* Make the font bolder */
+  color: #444; /* A subtle, lighter shade of the background */
+  text-transform: uppercase;
+  line-height: 1.2;
 }
