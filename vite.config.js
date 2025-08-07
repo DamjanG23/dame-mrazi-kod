@@ -1,3 +1,6 @@
-export default {
-  base: "/dame-mrazi-kod/",
-};
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  base: '/dame-mrazi-kod/',
+});
+
