@@ -43,9 +43,10 @@ body {
 }
 
 .site-nav a {
+  font-family: 'Jersey 10', cursive;
   color: white;
   text-decoration: none;
-  font-size: 1rem; /* Slightly smaller font for mobile nav */
+  font-size: 1.8rem; /* Increased size for the new font */
   font-weight: 400;
   padding: 0.5rem; /* Smaller padding for smaller screens */
   border-radius: 6px;
@@ -53,11 +54,11 @@ body {
 }
 
 .site-nav a.active {
-  background-color: #4f46e5;
+  background-color: #027AD0;
 }
 
 .site-nav a:hover {
-  background-color: #3730a3;
+  background-color: #025a9e;
 }
 
 /* --- Main Content --- */
@@ -73,7 +74,7 @@ h1 {
   font-family: "Jersey 10", cursive;
   font-size: 3.5rem; /* Smaller size for mobile */
   font-weight: 400;
-  color: #4f46e5;
+  color: #027AD0;
   line-height: 1.1; /* Adjust line height for large fonts */
 }
 
@@ -87,7 +88,7 @@ h2 {
 .image-wrapper {
   display: inline-block;
   padding: 6px; /* Slightly smaller padding */
-  border: 2px solid #4f46e5;
+  border: 2px solid #027AD0;
   border-radius: 50%;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -195,7 +196,7 @@ h2 {
 }
 
 .social-links a:hover {
-  color: #4f46e5; /* Use our main highlight color on hover */
+  color: #027AD0; /* Use our main highlight color on hover */
   transform: translateY(-3px); /* Give the icon a little "lift" on hover */
 }
 
@@ -242,4 +243,46 @@ h2 {
   color: #444; /* A subtle, lighter shade of the background */
   text-transform: uppercase;
   line-height: 1.2;
+}
+
+.description-section {
+  min-height: 80vh; /* Reduced from 100vh */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1A1A1A; /* A new, subtle dark color */
+}
+
+.description-heading {
+  flex: 0.5; /* Let it take a smaller portion of the space */
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description-heading h2 {
+  font-family: 'Jersey 10', cursive;
+  font-size: 20vh; /* Reduced from 25vh */
+  color: #444; /* Reverted to the previous color */
+  transform: rotate(-90deg);
+  white-space: nowrap; /* Prevent the text from wrapping */
+  line-height: 0.8; /* Tighten the line height */
+}
+
+.description-content {
+  flex: 5; /* Give the content more space */
+  padding: 0 40px;
+}
+
+.description-content p {
+  font-family: 'Jersey 10', cursive;
+  font-size: 3vw; /* Use viewport width for responsive font size */
+  color: #ccc;
+  line-height: 1.6;
+  max-width: 800px; /* Constrain the width for better readability */
+}
+
+.highlight {
+  color: #027AD0;
 }
