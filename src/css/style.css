@@ -48,12 +48,13 @@
 }
 
 body {
-  background-color: #121212;
-  color: white;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   line-height: 1.6;
-  overflow-x: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr;
   /* For Firefox */
   scrollbar-width: none;
   /* For Internet Explorer and Edge */
@@ -221,11 +222,7 @@ body::-webkit-scrollbar {
     height: var(--sizing-2xl); /* 48px */
     padding: var(--padding-none) var(--padding-l); /* 0 24px */
   }
-
-  
 }
-
-
 
 /* MOBILE-FIRST HEADING SIZES */
 h1 {
@@ -300,7 +297,7 @@ h2 {
   flex-direction: column;
   justify-content: flex-start; /* Align content to the top */
   align-items: center;
-  padding: 2rem 20px 0; /* Ensure no bottom padding */
+  padding: var(--padding-m) var(--padding-m) 0; /* Ensure no bottom padding */
   position: relative;
   overflow: hidden;
 }
@@ -325,28 +322,26 @@ h2 {
 
 .hero-text-left {
   order: 1;
+  color: var(--color-text-primary);
 }
 
 .hero-text-right {
   order: 2;
+  color: var(--color-accent);
 }
 
-.hero-text-left svg {
+.hero-text-left svg,
+.hero-text-right svg {
   width: 100%;
   height: auto;
-  color: var(--color-text-primary);
   fill: currentColor;
-}
-
-.hero-text-right h2 {
-  font-size: 11vw; /* Adjusted from 13vw */
 }
 
 @media (min-width: 992px) {
   .hero {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 var(--padding-m);
   }
 
   .hero-character {
