@@ -24,12 +24,12 @@
 
   /* --- BASE PALETTE --- */
   --blue-900: #000814;
-  --blue-800: #001D3D;
+  --blue-800: #001d3d;
   --blue-700: #003566;
-  --yellow-500: #FFC300;
-  --yellow-400: #FFD60A;
-  --white: #FFFFFF;
-  --gray-300: #CED4DA;
+  --yellow-500: #ffc300;
+  --yellow-400: #ffd60a;
+  --white: #ffffff;
+  --gray-300: #ced4da;
 
   /* --- SEMANTIC USAGE --- */
   --color-background: var(--blue-900);
@@ -61,7 +61,8 @@ body {
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-html::-webkit-scrollbar, body::-webkit-scrollbar {
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
   display: none;
 }
 
@@ -86,9 +87,9 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--padding-xxs); /* 4px */
+  gap: var(--padding-s); /* 4px */
   /* 4px top/bottom, 16px left/right */
-  padding: var(--padding-xxs) var(--padding-m) var(--padding-xs);
+  padding: var(--padding-s) var(--padding-m);
 }
 
 .site-header__brand {
@@ -101,10 +102,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .site-header__logo {
-  font-family: 'Jersey 10', cursive;
+  font-family: "Jersey 10", cursive;
   font-size: var(--sizing-l); /* 32px */
   color: var(--color-accent);
   text-decoration: none;
+  line-height: 0.8;
   /* Prevents the logo from shrinking if space is tight */
   flex-shrink: 0;
 }
@@ -130,7 +132,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .site-header__social svg {
-  width: var(--sizing-m);  /* 24px */
+  width: var(--sizing-m); /* 24px */
   height: var(--sizing-m); /* 24px */
   /* This is the key: it tells the SVG to use the text color of its parent `a` tag */
   fill: currentColor;
@@ -150,7 +152,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .site-header__nav a {
-  font-family: 'Jersey 10', cursive;
+  font-family: "Jersey 10", cursive;
   color: var(--color-text-primary);
   text-decoration: none;
   font-size: var(--sizing-m); /* 24px */
@@ -177,15 +179,50 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   .site-header__container {
     flex-direction: row;
     justify-content: space-between;
-    /* 12px top/bottom, 24px left/right */
-    padding: var(--padding-s) var(--padding-l);
+    align-items: center; /* For vertical alignment */
+    padding: var(--padding-m) var(--padding-2xl);
+  }
+
+  .site-header__brand {
+    display: contents; /* Makes children direct flex items of the container */
+  }
+
+  /* Re-order the elements for the three-column layout */
+  .site-header__logo {
+    order: 1;
+    font-size: var(--sizing-xl); /* 40px */
+    line-height: 0.8;
+  }
+
+  .site-header__nav {
+    order: 2;
+    width: auto; /* Reset width from mobile */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .site-header__social {
+    order: 3;
+    gap: var(--sizing-s);
+  }
+
+  .site-header__social svg {
+    width: var(--sizing-xl);
+    height: var(--sizing-xl);
+  }
+
+  .site-header__nav ul {
+    justify-content: center; /* Group nav links together */
+    gap: var(--sizing-m); /* Add space between nav links */
   }
 
   .site-header__nav a {
-    font-size: 1.1rem;
+    font-size: var(--sizing-xl); /* 40px */
+    line-height: 0.7;
+    height: var(--sizing-2xl); /* 48px */
+    padding: var(--padding-none) var(--padding-l); /* 0 24px */
   }
 }
-
 
 /* --- Main Content --- */
 
@@ -227,71 +264,6 @@ h2 {
   object-fit: cover;
   display: block;
   border-radius: 50%;
-}
-
-/* =============================================== */
-/* --- RESPONSIVE STYLES (FOR TABLET & DESKTOP) --- */
-/* =============================================== */
-
-/* This media query targets any screen with a minimum width of 768px. */
-/* This is a common breakpoint for tablets and larger devices. */
-@media (min-width: 768px) {
-  .hero {
-    margin: 0; /* Remove the negative margin on larger screens */
-    padding: 0; /* Remove the padding on larger screens */
-  }
-
-  /* On larger screens, we don't need the body padding */
-  body {
-    padding: 0;
-  }
-
-  /* We also don't need the negative margin trick on the header */
-  .site-header {
-    margin: 0;
-    padding: 1rem 0;
-  }
-
-  .site-nav ul {
-    gap: 20px; /* Increase the gap back for desktop */
-  }
-
-  .site-nav a {
-    font-size: 1.1rem; /* Increase nav font size */
-    padding: 0.5rem 1rem; /* Increase padding */
-  }
-
-  /* Increase heading sizes for desktop */
-  h1 {
-    font-size: 5rem;
-  }
-
-  h2 {
-    font-size: 2.5rem;
-  }
-
-  /* Make the profile image larger on desktop */
-  .image-wrapper {
-    padding: 8px;
-  }
-
-  .image-wrapper img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .site-footer {
-    /* On desktop, we don't need the negative margin trick */
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .footer-content {
-    flex-direction: row; /* Place items side-by-side on desktop */
-    justify-content: space-between; /* Pushes copyright to the left and social to the right */
-  }
 }
 
 /* --- Footer --- */
