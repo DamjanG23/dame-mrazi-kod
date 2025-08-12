@@ -79,7 +79,7 @@ body {
   align-items: center;
   gap: var(--padding-xxs); /* 4px */
   /* 4px top/bottom, 16px left/right */
-  padding: var(--padding-xxs) var(--padding-m);
+  padding: var(--padding-xxs) var(--padding-m) var(--padding-xs);
 }
 
 .site-header__brand {
@@ -109,7 +109,9 @@ body {
 .site-header__social a {
   /* The SVG will inherit this color */
   color: var(--color-accent);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: color 0.3s ease;
 }
 
