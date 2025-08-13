@@ -299,7 +299,7 @@ h2 {
   align-items: center;
   padding: var(--padding-m) var(--padding-m) 0; /* Ensure no bottom padding */
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .hero-character {
@@ -337,46 +337,7 @@ h2 {
   fill: currentColor;
 }
 
-@media (min-width: 992px) {
-  .hero {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 var(--padding-m);
-  }
 
-  .hero-character {
-    position: absolute;
-    height: 100%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    order: 0;
-  }
-
-  .hero-text-left {
-    text-align: left;
-    order: 0;
-  }
-
-  .hero-text-right {
-    text-align: right;
-    order: 0;
-  }
-
-  .hero-text-left h2,
-  .hero-text-right h2 {
-    font-size: 8rem;
-    line-height: 1.2;
-    max-width: none; /* Remove max-width */
-    white-space: normal; /* Allow wrapping */
-  }
-
-  .hero-text-left h2 br,
-  .hero-text-right h2 br {
-    display: initial; /* Show line breaks on desktop */
-  }
-}
 
 .description-section {
   min-height: 80vh; /* Reduced from 100vh */
