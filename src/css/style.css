@@ -222,6 +222,10 @@ body::-webkit-scrollbar {
     height: var(--sizing-2xl); /* 48px */
     padding: var(--padding-none) var(--padding-l); /* 0 24px */
   }
+
+  .hero {
+    height: calc(100vh - 80px);
+  }
 }
 
 main {
@@ -299,21 +303,29 @@ h2 {
   background-color: var(--color-background);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align content to the top */
   align-items: center;
-  padding: var(--padding-m) var(--padding-m) 0; /* Ensure no bottom padding */
+  padding: var(--padding-m) var(--padding-m) 0;
   position: relative;
   overflow-x: hidden;
+  min-height: calc(100vh - 110px);
+  gap: var(--padding-xs);
+}
+
+.hero-character-container {
+  flex-grow: 1;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 3;
+  z-index: 1;
 }
 
 .hero-character {
-  position: static;
-  transform: none;
-  width: 100%; /* Ensure it can scale horizontally */
-  height: auto; /* Fill the container */
+  width: auto;
+  height: 100%;
+  max-width: 100%;
   object-fit: contain;
-  order: 3;
-  z-index: 1;
 }
 
 .hero-text-left,
@@ -340,8 +352,6 @@ h2 {
   height: auto;
   fill: currentColor;
 }
-
-
 
 .description-section {
   min-height: 80vh; /* Reduced from 100vh */
