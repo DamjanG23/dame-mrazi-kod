@@ -224,6 +224,10 @@ body::-webkit-scrollbar {
   }
 }
 
+main {
+  overflow: hidden;
+}
+
 /* MOBILE-FIRST HEADING SIZES */
 h1 {
   margin-bottom: 20px;
