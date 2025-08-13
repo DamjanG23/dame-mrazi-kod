@@ -58,186 +58,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* --- Component: Site Header --- */
-/* Mobile-First Styles */
-.site-header {
-  background-color: var(--color-surface);
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.site-header__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--padding-xs); /* 8px */
-  padding: var(--padding-xs) var(--padding-m); /* 8px 16px */
-}
-
-.site-header__brand {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  /* 0 top/bottom, 12px left/right */
-  padding: var(--padding-none) var(--padding-s);
-}
-
-.site-header__logo {
-  font-family: "Jersey 10", cursive;
-  font-size: var(--sizing-l); /* 32px */
-  color: var(--color-accent);
-  text-decoration: none;
-  line-height: 0.8;
-  /* Prevents the logo from shrinking if space is tight */
-  flex-shrink: 0;
-}
-
-.site-header__social {
-  display: flex;
-  align-items: center;
-  gap: var(--padding-s); /* 12px */
-}
-
-.site-header__social a {
-  /* The SVG will inherit this color */
-  color: var(--color-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.3s ease;
-}
-
-.site-header__social a:hover {
-  /* On hover, we can change the color to something else, e.g., secondary accent */
-  color: var(--color-accent-secondary);
-}
-
-.site-header__social svg {
-  width: var(--sizing-m); /* 24px */
-  height: var(--sizing-m); /* 24px */
-  /* This is the key: it tells the SVG to use the text color of its parent `a` tag */
-  fill: currentColor;
-}
-
-.site-header__nav {
-  width: 100%;
-}
-
-.site-header__nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-
-
-.site-header__nav a.active {
-  background-color: var(--color-primary);
-}
-
-.site-header__nav a:hover {
-  background-color: var(--color-accent);
-  color: var(--color-background);
-}
-
-/* Tablet & Desktop Styles */
-@media (min-width: 768px) {
-  .site-header__container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; /* For vertical alignment */
-    padding: var(--padding-m) var(--padding-2xl);
-  }
-
-  .site-header__brand {
-    display: contents; /* Makes children direct flex items of the container */
-  }
-
-  /* Re-order the elements for the three-column layout */
-  .site-header__logo {
-    order: 1;
-    font-size: var(--sizing-xl); /* 40px */
-    line-height: 0.8;
-  }
-
-  .site-header__nav {
-    order: 2;
-    width: auto; /* Reset width from mobile */
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .site-header__social {
-    order: 3;
-    gap: var(--sizing-s);
-  }
-
-  .site-header__social svg {
-    width: var(--sizing-xl);
-    height: var(--sizing-xl);
-  }
-
-  .site-header__nav ul {
-    justify-content: center; /* Group nav links together */
-    gap: var(--sizing-m); /* Add space between nav links */
-  }
-
-  .site-header__nav a {
-    font-size: var(--sizing-xl); /* 40px */
-    line-height: 0.7;
-    height: var(--sizing-2xl); /* 48px */
-    padding: var(--padding-none) var(--padding-l); /* 0 24px */
-  }
-
-  .hero {
-    height: calc(100vh - 80px);
-  }
-}
-
 main {
   overflow: hidden;
 }
 
 /* MOBILE-FIRST HEADING SIZES */
-h1 {
-  margin-bottom: 20px;
-  font-family: "Jersey 10", cursive;
-  font-size: 3.5rem; /* Smaller size for mobile */
-  font-weight: 400;
-  color: #027ad0;
-  line-height: 1.1; /* Adjust line height for large fonts */
-}
-
-h2 {
-  font-family: "Jersey 10", cursive;
-  font-size: 1.8rem; /* Smaller size for mobile */
-  font-weight: 400;
-  color: #aaa;
-}
-
-.image-wrapper {
-  display: inline-block;
-  padding: 6px; /* Slightly smaller padding */
-  border: 2px solid #027ad0;
-  border-radius: 50%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-.image-wrapper img {
-  width: 150px; /* Smaller image for mobile */
-  height: 150px;
-  object-fit: cover;
-  display: block;
-  border-radius: 50%;
-}
 
 .hero {
   background-color: var(--color-background);
@@ -291,4 +116,11 @@ h2 {
   width: 100%;
   height: auto;
   fill: currentColor;
+}
+
+/* Tablet & Desktop Styles */
+@media (min-width: 768px) {
+  .hero {
+    height: calc(100vh - 80px);
+  }
 }
