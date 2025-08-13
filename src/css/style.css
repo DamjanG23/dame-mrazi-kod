@@ -310,7 +310,7 @@ h2 {
   position: static;
   transform: none;
   width: 100%; /* Ensure it can scale horizontally */
-  height: 100%; /* Fill the container */
+  height: auto; /* Fill the container */
   object-fit: contain;
   order: 3;
   z-index: 1;
