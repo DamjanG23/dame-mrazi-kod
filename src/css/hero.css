@@ -3,7 +3,7 @@
   flex-direction: column;
   padding: var(--padding-m) var(--padding-m) var(--padding-none)
     var(--padding-m);
-  height: calc(100vh - 90px);
+  height: calc(100svh - 90px);
   gap: var(--padding-s);
 }
 
