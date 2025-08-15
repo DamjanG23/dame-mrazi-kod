@@ -11,34 +11,21 @@
 
 .hero-text {
   width: 100%;
-}
-
-.hero-text {
-}
-
-.hero-text-engineering {
+  height: auto;
+  fill: currentColor;
 }
 
 .svg-engineering {
   color: var(--color-text-primary);
 }
 
-.hero-text-meets-design {
-}
-
 .svg-meets-design {
   color: var(--color-text-primary);
-}
-
-.hero-text-engineering-meets-design {
 }
 
 .svg-engineering-meets-design {
   color: var(--color-text-primary);
   display: none;
-}
-
-.hero-text-exceeding-full-stack {
 }
 
 .svg-exceeding-full-stack {
@@ -49,26 +36,15 @@
 
 .hero-character-container {
   flex-grow: 1;
-  min-height: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  order: 3;
-  z-index: 1;
-}
-
-.hero-character {
-  width: auto;
-  height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-}
-
-.hero-text svg,
-.hero-text-right svg {
-  width: 100%;
-  height: auto;
-  fill: currentColor;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("../../images/Dame_eze.png");
+  background-position: center bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* Tablet & Desktop Styles */
