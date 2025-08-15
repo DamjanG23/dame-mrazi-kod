@@ -75,6 +75,18 @@
 @media (min-width: 768px) {
   .hero {
     height: calc(100vh - 80px);
+    justify-content: flex-end;
+    padding: var(--padding-m);
+
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 100%
+      ),
+      url("../../images/Dame_eze_celo.png");
+    background-position: center bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .svg-engineering-meets-design {
@@ -86,6 +98,12 @@
   }
 
   .svg-meets-design {
+    display: none;
+  }
+
+  /* --- HERO CHARACTER --- */
+
+  .hero-character-container {
     display: none;
   }
 }
