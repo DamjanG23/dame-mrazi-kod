@@ -1,8 +1,6 @@
 .hero {
   display: flex;
   flex-direction: column;
-  /* padding: var(--padding-m) var(--padding-m) var(--padding-none)
-    var(--padding-m); */
   height: calc(100svh - 90px);
 }
 
@@ -45,7 +43,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url("../../images/Dame_eze.png");
+    url("../../../images/Dame_eze.png");
   background-position: center bottom;
   background-size: contain;
   background-repeat: no-repeat;
@@ -64,7 +62,7 @@
         rgba(0, 0, 0, 0) 0%,
         rgba(0, 0, 0, 1) 100%
       ),
-      url("../../images/Dame_eze_celo.png");
+      url("../../../images/Dame_eze_celo.png");
     background-position: center bottom;
     background-size: contain;
     background-repeat: no-repeat;
