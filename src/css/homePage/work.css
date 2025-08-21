@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin: var(--padding-xl);
-  gap: var(--padding-l);
+  padding-top: var(--padding-4xl);
 }
 
 .featured-work-title {
@@ -11,6 +11,7 @@
   color: var(--color-text-primary);
   font-size: var(--font-3xl);
   line-height: 0.6;
+  padding-bottom: var(--padding-2xl);
 }
 
 .project-item {
@@ -52,7 +53,12 @@
 
 @media (min-width: 768px) {
   .work {
+    padding-top: var(--padding-xl);
     margin: var(--padding-4xl);
+  }
+
+  .featured-work-title {
+    padding-bottom: var(--padding-xl);
   }
 
   .project-item {
