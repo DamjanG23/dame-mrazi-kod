@@ -1,0 +1,78 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  background-color: var(--color-surface);
+
+  background-image: linear-gradient(to bottom, #00000000 0%, #003566 100%);
+}
+
+.footer-name {
+  width: 100%;
+  fill: var(--color-accent);
+}
+
+.footer-links-and-character {
+  width: 100%;
+  background-image: linear-gradient(to top, #00000000 0%, #000814 100%),
+    url("../../images/DameEzeFliped.png");
+  background-position: top right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-bottom: var(--padding-3xl);
+}
+
+.footer-links-title {
+  padding: var(--padding-4xl) var(--padding-m) var(--padding-xl)
+    var(--padding-4xl);
+  font-family: "Jersey 10";
+  font-size: var(--font-2xl);
+  line-height: 0.6;
+  color: var(--color-text-primary);
+}
+
+.link-icon {
+  width: var(--sizing-xl);
+}
+
+.link-text {
+  font-family: "Jersey 10";
+  font-size: var(--font-2xl);
+  line-height: 0.6;
+  /* color: var(--color-text-primary); */
+}
+
+.icon-and-text {
+  text-decoration: none;
+  width: 100%;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--padding-m);
+  justify-content: center;
+  padding: var(--padding-xxs) var(--padding-m) var(--padding-xxs)
+    var(--padding-m);
+  color: var(--color-text-primary);
+  fill: var(--color-accent);
+}
+
+.icon-and-text:hover {
+  background-color: var(--color-text-primary);
+  color: var(--color-surface);
+  fill: var(--color-surface);
+}
+
+.links-column {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: var(--padding-m);
+}
+
+.links {
+  padding-left: var(--padding-4xl);
+  display: flex;
+  flex-direction: row;
+  gap: var(--padding-xl);
+}
