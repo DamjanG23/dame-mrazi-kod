@@ -1,0 +1,68 @@
+.work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--padding-4xl);
+  gap: var(--padding-l);
+}
+
+.featured-work-title {
+  font-family: "Jersey 10";
+  color: var(--color-text-primary);
+  font-size: var(--font-3xl);
+  line-height: 0.6;
+}
+
+.project-item {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-text-primary);
+  font-family: "Jersey 10";
+  font-size: var(--font-2xl);
+  padding: var(--padding-xl);
+  text-decoration: none;
+}
+
+.project-item:hover {
+  background-color: var(--color-text-primary);
+  color: var(--color-background);
+}
+
+.project-item-first-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: var(--font-2xl);
+  font-weight: bold;
+}
+
+.project-item-second-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: var(--font-xl);
+}
+
+.project-item-first-row-roles {
+  font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  .project-item {
+    border: none;
+    border-bottom: 1px solid var(--color-text-primary);
+    font-size: var(--font-2xl);
+    padding: var(--padding-xl);
+  }
+
+  .project-item-first-row {
+    flex-direction: row;
+  }
+
+  .project-item-second-row {
+    flex-direction: row;
+  }
+}

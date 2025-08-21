@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--padding-l) var(--padding-3xl);
+  margin: var(--padding-4xl);
   gap: var(--padding-l);
+  border: 2px solid var(--color-text-primary);
+  padding: var(--padding-2xl);
 }
 
 .about-title {
@@ -16,7 +18,7 @@
 .about-paragraph {
   font-family: "Jersey 10";
   color: var(--color-text-primary);
-  font-size: var(--font-s);
+  font-size: var(--font-m);
   text-align: justify;
   line-height: 1;
 }
@@ -26,7 +28,7 @@
     flex-direction: row;
     align-items: start;
     justify-content: center;
-    padding: var(--padding-3xl);
+    margin: var(--sizing-5xl);
     gap: var(--padding-3xl);
   }
 
@@ -37,9 +39,5 @@
 
   .about-paragraph {
     max-width: var(--sizing-8xl);
-    font-family: "Jersey 10";
-    color: var(--color-text-primary);
-    font-size: var(--font-m);
-    text-align: justify;
   }
 }
