@@ -73,8 +73,8 @@
 }
 
 .links {
-  padding-left: var(--padding-5xl);
-  padding-right: var(--padding-5xl);
+  padding-left: var(--padding-4xl);
+  padding-right: var(--padding-4xl);
   display: flex;
   flex-direction: column;
   gap: var(--padding-m);
