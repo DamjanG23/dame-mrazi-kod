@@ -1,0 +1,31 @@
+.cv-download {
+  display: flex;
+  flex-direction: row;
+  gap: var(--padding-xl);
+  padding: var(--padding-l) var(--padding-4xl);
+  margin: var(--padding-none) var(--padding-none) var(--padding-none)
+    var(--padding-none);
+  color: var(--color-text-primary);
+  background-color: var(--color-primary);
+  width: fit-content;
+  font-family: "Jersey 10";
+  line-height: 0.7;
+  /* font-weight: bold; */
+  font-size: var(--font-3xl);
+  fill: var(--color-text-primary);
+  justify-content: center;
+  margin: auto;
+  margin-top: var(--padding-3xl);
+  text-decoration: none;
+}
+
+.cv-download:hover {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  fill: var(--color-background);
+}
+
+.open-icon {
+  width: var(--sizing-3xl);
+  height: auto;
+}
