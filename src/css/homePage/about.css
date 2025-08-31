@@ -18,7 +18,7 @@
 .about-paragraph {
   font-family: "Jersey 10";
   color: var(--color-text-primary);
-  font-size: var(--font-m);
+  font-size: var(--font-s);
   line-height: 1;
 }
 
@@ -40,6 +40,7 @@
   .about-paragraph {
     max-width: var(--sizing-8xl);
     text-align: justify;
+    font-size: var(--font-m);
   }
 }
 
