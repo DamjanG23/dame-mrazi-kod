@@ -48,9 +48,8 @@
   --font-xs: 0.875rem; /* 14px  - secondary text */
   --font-s: 1.5rem; /* 16px  - base body text */
   --font-m: 2rem; /* 18px  - large body / intro */
-  --font-l: 1.25rem; /* 20px  - small headings */
-  --font-xl: 1.5rem; /* 24px  - section headings */
   --font-2xl: 2.3rem; /* 32px  - hero / about titles */
+  --font-2-5xl: 4rem;
   --font-3xl: 6rem; /* XXpx  - big titles */
   --font-4xl: 8rem; /* XXpx - hero only */
 }
