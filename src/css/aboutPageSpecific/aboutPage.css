@@ -1,8 +1,8 @@
 .cv-download {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: var(--padding-xl);
-  padding: var(--padding-l);
+  padding: var(--padding-xl);
   color: var(--color-text-primary);
   background-color: var(--color-primary);
   font-family: "Jersey 10";
@@ -11,6 +11,9 @@
   fill: var(--color-text-primary);
   justify-content: center;
   text-decoration: none;
+  margin-left: var(--padding-2xl);
+  margin-right: var(--padding-2xl);
+  margin-bottom: var(--padding-2xl);
 }
 
 .cv-download:hover {
@@ -20,14 +23,20 @@
 }
 
 .open-icon {
-  width: var(--sizing-3xl);
+  width: var(--sizing-4xl);
   height: auto;
 }
 
 @media (min-width: 768px) {
   .cv-download {
+    flex-direction: row;
     margin-left: var(--sizing-5xl);
     margin-right: var(--sizing-5xl);
+    margin-bottom: var(--padding-none);
+  }
+
+  .open-icon {
+    width: var(--sizing-3xl);
   }
 }
 
