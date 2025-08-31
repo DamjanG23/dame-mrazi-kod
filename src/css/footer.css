@@ -33,6 +33,15 @@
   color: var(--color-text-primary);
 }
 
+.email-phone {
+  padding: var(--padding-xl) var(--padding-3xl) var(--padding-none)
+    var(--padding-3xl);
+  text-align: center;
+  font-family: "Jersey 10";
+  font-size: var(--font-2xl);
+  color: var(--color-text-primary);
+}
+
 .link-icon {
   width: var(--sizing-xl);
 }
@@ -122,6 +131,13 @@
     text-align: left;
   }
 
+  .email-phone {
+    padding: var(--padding-xl) var(--padding-4xl) var(--padding-none)
+      var(--padding-4xl);
+    text-align: left;
+    line-height: 0.6;
+  }
+
   .links-column {
     width: fit-content;
   }
@@ -135,6 +151,13 @@
   .footer-links-title {
     max-width: 1280px;
     padding: var(--padding-4xl) var(--padding-none) var(--padding-xl)
+      var(--padding-none);
+    margin: var(--padding-none) auto var(--padding-none) auto;
+  }
+
+  .email-phone {
+    max-width: 1280px;
+    padding: var(--padding-xl) var(--padding-none) var(--padding-none)
       var(--padding-none);
     margin: var(--padding-none) auto var(--padding-none) auto;
   }
