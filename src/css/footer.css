@@ -38,7 +38,7 @@
     var(--padding-3xl);
   text-align: center;
   font-family: "Jersey 10";
-  font-size: var(--font-m);
+  font-size: var(--font-s);
   color: var(--color-text-primary);
 }
 
