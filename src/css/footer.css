@@ -117,7 +117,7 @@
   }
 
   .footer-links-title {
-    padding: var(--padding-4xl) var(--padding-m) var(--padding-xl)
+    padding: var(--padding-4xl) var(--padding-4xl) var(--padding-xl)
       var(--padding-4xl);
     text-align: left;
   }
@@ -128,5 +128,20 @@
 
   .icon-and-text {
     justify-content: center;
+  }
+}
+
+@media (min-width: 1921px) {
+  .footer-links-title {
+    max-width: 1280px;
+    padding: var(--padding-4xl) var(--padding-none) var(--padding-xl)
+      var(--padding-none);
+    margin: var(--padding-none) auto var(--padding-none) auto;
+  }
+
+  .links {
+    max-width: 1280px;
+    padding-left: var(--padding-none);
+    margin: var(--padding-none) auto var(--padding-none) auto;
   }
 }
