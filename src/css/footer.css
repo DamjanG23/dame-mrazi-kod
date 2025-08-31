@@ -38,7 +38,7 @@
     var(--padding-3xl);
   text-align: center;
   font-family: "Jersey 10";
-  font-size: var(--font-2xl);
+  font-size: var(--font-xl);
   color: var(--color-text-primary);
 }
 
@@ -136,6 +136,8 @@
       var(--padding-4xl);
     text-align: left;
     line-height: 0.6;
+    font-size: var(--font-2xl);
+    text-decoration: none;
   }
 
   .links-column {
