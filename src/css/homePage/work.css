@@ -3,7 +3,7 @@
   flex-direction: column;
   /* align-items: center; */
   margin: var(--padding-2xl);
-  padding-top: var(--padding-xl);
+  /* padding-top: var(--padding-xl); */
 }
 
 .featured-work-title {
