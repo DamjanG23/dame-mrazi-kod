@@ -97,4 +97,8 @@
     margin: var(--sizing-5xl) auto var(--sizing-5xl) auto;
     max-width: 1280px;
   }
+
+  #projects-page {
+    margin: var(--padding-2xl) auto var(--padding-4xl) auto;
+  }
 }
