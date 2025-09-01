@@ -1,0 +1,40 @@
+.description {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  margin-left: var(--padding-2xl);
+  margin-right: var(--padding-2xl);
+  gap: var(--padding-xs);
+}
+
+.description h1 {
+  font-family: "Jersey 10";
+  color: var(--color-accent);
+  font-size: var(--font-3xl);
+}
+
+.description h2 {
+  font-family: "Jersey 10";
+  color: var(--color-text-primary);
+  font-size: var(--font-2-5xl);
+}
+
+.description p {
+  font-family: "Jersey 10";
+  color: var(--color-text-secondary);
+  font-size: var(--font-m);
+}
+
+@media (min-width: 768px) {
+  .description {
+    margin-left: var(--sizing-5xl);
+    margin-right: var(--sizing-5xl);
+  }
+}
+
+@media (min-width: 2000px) {
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
