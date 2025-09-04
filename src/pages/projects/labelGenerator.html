@@ -75,55 +75,50 @@
 
     <main>
       <section class="description">
-        <h1>EVE IDAM</h1>
+        <h1>LABEL GENERATOR</h1>
         <p>
-          TaskFlow is a lightweight task management web app designed to help
-          remote teams organize projects more efficiently. The goal was to
-          create a tool that balances simplicity with powerful features like
-          real-time collaboration and progress tracking.
+          A desktop tool that parses XML files from a CNC machine and prints
+          labels for the cut parts. The labels include part details and
+          instructions for post-processing, helping streamline production and
+          reduce errors.
         </p>
-
         <h2>My Role</h2>
-        <p>
-          I designed and developed the entire front-end in React, integrated the
-          back-end with Node.js and MongoDB, and implemented real-time updates
-          using WebSockets.
-        </p>
+        <p>Developer · Client Coordination/Communication</p>
         <h2>Tech Stack</h2>
-        <p>
-          React · TailwindCSS · Node.js · Express · MongoDB · WebSockets · Figma
-        </p>
-        <h2>Key Features</h2>
-        <p>
-          - Real-time task updates across all team members <br />
-          - Visual progress tracking dashboard <br />
-          - Dark/light mode for accessibility
-        </p>
+        <p>Electron · JavaScript · Node.js · HTML & CSS</p>
         <h2>Challenges & Solutions</h2>
         <p>
-          One challenge was ensuring smooth, real-time syncing across multiple
-          devices. I solved this by implementing a WebSocket-based architecture,
-          reducing sync latency to under 200ms.
+          The biggest challenge was reverse-engineering the XML file from the
+          CNC machine, which had no documentation. I worked closely with the
+          client and spent time in their production process to understand how
+          the XML related to the parts. Through hands-on observation and
+          collaboration, I identified the key data needed to generate accurate
+          and useful labels. <br />
+          <br />
+          The app had to handle two different types of XML files coming from
+          different programs, each with a slightly different structure. So I
+          designed the parser to detect and adapt to both XML formats, ensuring
+          that labels were generated accurately regardless of the source.
         </p>
         <h2>Impact</h2>
         <p>
-          - Used by a team of 20+ beta testers, reducing task miscommunication
-          by 35% <br />
-          - Positive feedback for speed and clean UI <br />
-          - Selected as a finalist in my university’s hackathon
+          - Developed an app that is used by a team of more than 30 people.
+          <br />
+          - Saved time previously spent manually creating labels. <br />
+          - Reduced errors in labeling and post-processing instructions. <br />
         </p>
       </section>
 
       <section class="button-column">
-        <a href="" target="_blank" class="button">
+        <!-- <a href="" target="_blank" class="button">
           <p>VIEW IT LIVE</p>
           <svg class="icon" viewBox="0 0 24 24">
             <path
               d="m22,9v-2h-1v-2h-1v-1h-1v-1h-2v-1h-2v-1h-6v1h-2v1h-2v1h-1v1h-1v2h-1v2h-1v7h1v1h1v2h1v1h1v1h2v1h2v1h6v-1h2v-1h2v-1h1v-1h1v-2h1v-2h1v-6h-1Zm-1,1v4h-3v-4h3Zm-5-6h1v1h2v2h1v1h-3v-3h-1v-1Zm-2,14v2h-1v1h-2v-1h-1v-2h-1v-2h6v2h-1Zm2-8v4h-8v-4h8Zm-7-4h1v-2h1v-1h2v1h1v2h1v2h-6v-2Zm-5,1h1v-2h2v-1h1v1h-1v3h-3v-1Zm-1,7v-4h3v4h-3Zm2,5v-2h-1v-1h3v3h1v1h-1v-1h-2Zm14-2v2h-2v1h-1v-1h1v-3h3v1h-1Z"
             />
           </svg>
-        </a>
-        <a href="" target="_blank" class="button">
+        </a> -->
+        <a href="" target="_blank" class="button" id="disabled-button">
           <p>CASE STUDY</p>
           <svg class="icon" viewBox="0 0 24 24">
             <polygon
@@ -132,7 +127,11 @@
             <polygon points="21 6 21 8 13 8 13 1 15 1 15 3 18 3 18 6 21 6" />
           </svg>
         </a>
-        <a href="" target="_blank" class="button">
+        <a
+          href="https://github.com/DamjanG23/KrojnaLista-GUGO"
+          target="_blank"
+          class="button"
+        >
           <p>GITHUB REPO</p>
           <svg class="icon" viewBox="0 0 24 24">
             <polygon
