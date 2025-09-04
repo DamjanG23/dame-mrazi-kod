@@ -14,7 +14,7 @@
   background-color: var(--color-primary);
   font-family: "Jersey 10";
   line-height: 0.7;
-  font-size: var(--font-3xl);
+  font-size: var(--font-2-5xl);
   fill: var(--color-text-primary);
   justify-content: center;
   text-decoration: none;
@@ -34,12 +34,21 @@
   height: auto;
 }
 
+#disabled-button {
+  background-color: var(--color-text-secondary);
+  color: var(--color-background);
+  fill: var(--color-background);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 @media (min-width: 768px) {
   .button-column {
     gap: var(--padding-l);
   }
 
   .button {
+    font-size: var(--font-3xl);
     flex-direction: row;
     margin-left: var(--sizing-5xl);
     margin-right: var(--sizing-5xl);

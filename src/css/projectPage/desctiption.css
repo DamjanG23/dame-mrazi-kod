@@ -16,13 +16,13 @@
 .description h2 {
   font-family: "Jersey 10";
   color: var(--color-text-primary);
-  font-size: var(--font-2-5xl);
+  font-size: var(--font-2xl);
 }
 
 .description p {
   font-family: "Jersey 10";
   color: var(--color-text-secondary);
-  font-size: var(--font-m);
+  font-size: var(--font-s);
 }
 
 @media (min-width: 768px) {
